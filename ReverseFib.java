@@ -15,10 +15,11 @@ public class ReverseFib {
 		// OpenFile results = new OpenFile("reverse_fib_steps.txt").clear();
 		// ReverseFib RF;
 
-		// for (BigInteger i = Long.parseLong(pumpkins[0]); i < Long.parseLong(pumpkins[1]); i++) {
+		// BigInteger big2 = new BigInteger(pumpkins[1]);
+		// for (BigInteger i = new BigInteger(pumpkins[0]); i.compareTo(big2) < 0; i = i.add(BigInteger.ONE)) {
 		// 	RF = new ReverseFib(i);
 		// 	RF.run(false);
-		// 	results.write(RF.run(false) + "\n", true);
+			// results.write(RF.run(false) + "\n", true);
 		// }
 		// results.close();
 
@@ -32,9 +33,6 @@ public class ReverseFib {
 
 		// Golden ratio works +- 1 (through empirical data)
 		BigInteger[] temp = reverseFib(guessB.subtract(BigInteger.ONE), guessA.add(BigInteger.ONE));
-		if (temp[4].compareTo(longestFib[4]) > 0)
-			longestFib = temp;
-		temp = reverseFib(guessB.add(BigInteger.ONE), guessA.subtract(BigInteger.ONE));
 		if (temp[4].compareTo(longestFib[4]) > 0)
 			longestFib = temp;
 
